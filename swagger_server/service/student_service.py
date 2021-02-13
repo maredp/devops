@@ -46,14 +46,10 @@ def get_student_by_id(student_id, subject):
     return None
 
 def get_student_by_last_name(last_name):
-    print("TEST")
-    student = student_db.get(last_name=last_name)
-    if not student:
-        return student
-    if student is list:
-        student = student[0]
-    student = Student.from_dict(student)
-    return student
+    test = Query()
+    query = test.last_name == last_name
+    res = student_db.search(query)
+    return res
 
 
 def delete_student(student_id):

@@ -30,8 +30,8 @@ script:
 - node_modules/.bin/newman run tests/postman_collection.json -e tests/postman_environment.json
 after_success:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker tag devops/swagger_server devops/swagger_server
-- docker push devops/swagger_server
+- docker tag maredp/devops maredp/devops
+- docker push maredp/devops
 env:
   global:
   - secure: Ygf3pXWKNIhfelLIkh6b3JGcGP5dMLeLut/ake40tZFp/tcUY/W8o8XL9iwJmaqDwN1TWPdL355AxlJHBM6QcEnuzsycGbcMKRdqylcK5kimT0ubpdvGFXKYYW40wMf3bOs7HvfMO8j360bxSKgfQd2vsT1QShYXytQmUl2dCxS0rQuuNamW+KQpKHMUUlis5FOn8OshjMYOzAEcl7auT2O8tgv8KKv/fM81Hr4BVSm6gRVVcu4HFzKr9zW4HNEK56GdL+Na5eqaNscSmO9OOg0iW8eXF0dSl/N+4lQHC0U64Iod1fotz7ovRLDowZyP8I770YjPmIUDZEXiJcEvWxJiEieIEuiTlewTIJ9nxhr7AytT2WU0Tmep7EQV4kkrKfWqOTotNWG/Hlv3dLIFsx/m9hJeE8JGeOZLi4PtfIDvA1QC/DwyNQXVdQBinqlI7AmE4LXThEezZTOX5/ZsDsZSL4uq842hVZgDwu9J1HI+C0a7XRYLbdS4JBlTzQ8hvI6C6AVLp4dgivy9cU+lRU1nNzfcuiml2vpz0zcJ5gOX78+zvB7J0svZg6m8i3cC0+YOCydzYLzwUTLiGneZ7c1J0TTo564gwU1d9wNr2X6qjIK9bCooiuoJvESASiK5yTGIFK+7oekQzJUhBJJmi3VchZiAkQiP6LUw3/A9Am8=

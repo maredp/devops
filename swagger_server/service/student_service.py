@@ -49,6 +49,10 @@ def get_student_by_last_name(last_name):
     test = Query()
     query = test.last_name == last_name
     res = student_db.search(query)
+    if not res:
+        return res
+    if len(res) > 0:
+        return res[0]
     return res
 
 

@@ -53,7 +53,7 @@ def get_student_by_last_name(last_name):
         return res
     if len(res) > 0:
         return res[0]
-    return res
+    return None
 
 
 def delete_student(student_id):
